@@ -574,7 +574,7 @@ main {
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 42px;           /* length of the line */
+  width: 75px;           /* length of the line */
   height: 3px;
   background: var(--text-gradient-yellow);  /* matches your existing yellow */
   border-radius: 3px;
