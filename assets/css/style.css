@@ -172,7 +172,6 @@ article {
   border: 1px solid var(--jet);
   border-radius: 20px;
   width: 100%;
-  max-width: 520px;   /* keeps readable line-length on phones */
   margin-inline: auto;
   padding: 15px;
   box-shadow: var(--shadow-1);
