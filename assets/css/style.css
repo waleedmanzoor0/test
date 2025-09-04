@@ -563,7 +563,22 @@ main {
 
 .service-content-box { text-align: center; }
 
-.service-item-title { margin-bottom: 7px; }
+.service-item-title { 
+  position: relative;
+  padding-bottom: 8px;   /* space for the line */
+  margin-bottom: 7px; }
+
+
+.service-item-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 42px;           /* length of the line */
+  height: 3px;
+  background: var(--text-gradient-yellow);  /* matches your existing yellow */
+  border-radius: 3px;
+}
 
 .service-item-text {
   color: var(--light-gray);
@@ -1439,4 +1454,20 @@ textarea.form-input::-webkit-resizer { display: none; }
   .social-list { justify-content: center; }
 
   .timeline-text { max-width: 700px; }
+}
+
+
+/* === Make the service item fill the space nicely without the icon column === */
+.service-item {
+  /* your layout already swaps to flex at ≥580px; this keeps it tidy either way */
+}
+.service-content-box { 
+  flex: 1;               /* if flex is active at ≥580px, let content stretch */
+  text-align: left; 
+}
+
+
+/* (Optional) slightly longer line on bigger screens */
+@media (min-width: 768px) {
+  .service-item-title::after { width: 75px; }
 }
